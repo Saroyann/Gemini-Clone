@@ -25,7 +25,8 @@ const Sidebar = () => {
 
             <div className="bottom">
                 <div className="bottom-item">
-                    <img src={assets.question_icon} alt="" />
+                    <img src={assets.question_icon} />
+                    <p>Help</p>
                 </div>
             </div>
         </div>
