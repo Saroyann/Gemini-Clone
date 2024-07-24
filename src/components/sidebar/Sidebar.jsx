@@ -15,7 +15,7 @@ const Sidebar = () => {
                 </div>
 
                 <div className="recent">
-                    
+                    <p className="recent-title"></p>
                 </div>
             </div>
 
