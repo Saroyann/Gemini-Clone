@@ -10,7 +10,7 @@ const Sidebar = () => {
                 <img className='menu' src={assets.menu_icon} />
 
                 <div className="new-chat">
-
+                    <img src={assets.plus_icon} alt="" />
                 </div>
             </div>
 
