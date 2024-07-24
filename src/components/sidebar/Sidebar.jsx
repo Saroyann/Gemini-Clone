@@ -24,9 +24,17 @@ const Sidebar = () => {
             </div>
 
             <div className="bottom">
-                <div className="bottom-item">
+                <div className="bottom-item recent-entry">
                     <img src={assets.question_icon} />
                     <p>Help</p>
+                </div>
+                <div className="bottom-item recent-entry">
+                    <img src={assets.history_icon} />
+                    <p>History</p>
+                </div>
+                <div className="bottom-item recent-entry">
+                    <img src={assets.setting_icon} />
+                    <p>Setting</p>
                 </div>
             </div>
         </div>
