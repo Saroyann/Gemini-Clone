@@ -3,6 +3,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 25px 15px;
     background-color: #f0f4f9;
 }
 
@@ -13,5 +14,18 @@
 .sidebar .menu {
     display: block;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .new-chat {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: gray;
     cursor: pointer;
 }
