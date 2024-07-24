@@ -30,11 +30,11 @@ const Sidebar = () => {
                 </div>
                 <div className="bottom-item recent-entry">
                     <img src={assets.history_icon} />
-                    <p>History</p>
+                    <p>Activity</p>
                 </div>
                 <div className="bottom-item recent-entry">
                     <img src={assets.setting_icon} />
-                    <p>Setting</p>
+                    <p>Settings</p>
                 </div>
             </div>
         </div>
