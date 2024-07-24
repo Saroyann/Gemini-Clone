@@ -10,12 +10,15 @@ const Sidebar = () => {
                 <img className='menu' src={assets.menu_icon} />
 
                 <div className="new-chat">
-                    <img src={assets.plus_icon} alt="" />
+                    <img src={assets.plus_icon} />
                     <p>New Chat</p>
                 </div>
 
                 <div className="recent">
                     <p className="recent-title">Recent</p>
+                    <div className="recent-entry">
+                        <img src={assets.message_icon} />
+                    </div>
                 </div>
             </div>
 
