@@ -11,7 +11,11 @@ const Sidebar = () => {
 
                 <div className="new-chat">
                     <img src={assets.plus_icon} alt="" />
-                    <p>new chat</p>
+                    <p>New Chat</p>
+                </div>
+
+                <div className="recent">
+                    
                 </div>
             </div>
 
