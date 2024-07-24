@@ -9,3 +9,9 @@
 .sidebar img {
     width: 30px;
 }
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
