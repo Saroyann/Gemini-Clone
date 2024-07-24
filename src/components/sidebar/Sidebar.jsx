@@ -18,6 +18,7 @@ const Sidebar = () => {
                     <p className="recent-title">Recent</p>
                     <div className="recent-entry">
                         <img src={assets.message_icon} />
+                        <p>what is react ...</p>
                     </div>
                 </div>
             </div>
