@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sidebar.css'
 import { assets } from '../../assets/assets'
 
 const Sidebar = () => {
+
+const [extended, setExtended] = useState(false)
+
     return (
         <div className='sidebar'>
             <div className="top">
@@ -11,7 +14,7 @@ const Sidebar = () => {
 
                 <div className="new-chat">
                     <img src={assets.plus_icon} />
-                    <p>New Chat</p>
+                    {extended?<p>New Chat</p>:null}
                 </div>
 
                 <div className="recent">
