@@ -13,11 +13,14 @@ const ContextProvider = (props) => {
     const [resultData, setResultData] = useState("");
 
     const onSent = async () => {
+        setResultData("");
         setLoading(true);
-        const result = await run(input);
-        setResultData(result);
         setShowResult(true);
+        const response = await run(input);
+        setResultData(response);
         setLoading(false);
+        setInput("");
+
     };
 
     const contextValue = {

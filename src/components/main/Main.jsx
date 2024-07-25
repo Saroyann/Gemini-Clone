@@ -13,28 +13,41 @@ const Main = () => {
                 <img src={assets.user_icon} alt="User Icon" />
             </div>
             <div className="main-container">
-                <div className="greet">
-                    <p><span>Hello, Dev</span></p>
-                    <p>How can I help you?</p>
-                </div>
-                <div className="cards">
-                    <div className="card">
-                        <p>Suggest beautiful places to see on an upcoming road trip</p>
-                        <img src={assets.compass_icon} alt="Compass Icon" />
+
+                {!showResult
+                    ?
+                    <>
+                        <div className="greet">
+                            <p><span>Hello, Dev</span></p>
+                            <p>How can I help you?</p>
+                        </div>
+                        <div className="cards">
+                            <div className="card">
+                                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                                <img src={assets.compass_icon} alt="Compass Icon" />
+                            </div>
+                            <div className="card">
+                                <p>How to center a div</p>
+                                <img src={assets.bulb_icon} alt="Bulb Icon" />
+                            </div>
+                            <div className="card">
+                                <p>What is React JS</p>
+                                <img src={assets.message_icon} alt="Message Icon" />
+                            </div>
+                            <div className="card">
+                                <p>Improving our code skills</p>
+                                <img src={assets.code_icon} alt="Code Icon" />
+                            </div>
+                        </div>
+                    </> : 
+                    <div className='result'>
+
+
+
                     </div>
-                    <div className="card">
-                        <p>How to center a div</p>
-                        <img src={assets.bulb_icon} alt="Bulb Icon" />
-                    </div>
-                    <div className="card">
-                        <p>What is React JS</p>
-                        <img src={assets.message_icon} alt="Message Icon" />
-                    </div>
-                    <div className="card">
-                        <p>Improving our code skills</p>
-                        <img src={assets.code_icon} alt="Code Icon" />
-                    </div>
-                </div>
+                }
+
+
 
                 <div className="main-bottom">
                     <div className="search-box">
