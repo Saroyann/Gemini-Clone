@@ -39,10 +39,12 @@ const Main = () => {
                                 <img src={assets.code_icon} alt="Code Icon" />
                             </div>
                         </div>
-                    </> : 
+                    </> :
                     <div className='result'>
 
-
+                        <div className="result-title">
+                            <img src={assets.user_icon} />
+                        </div>
 
                     </div>
                 }
