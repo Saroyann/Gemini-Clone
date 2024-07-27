@@ -77,8 +77,8 @@ const Main = () => {
                 ) : (
                     <div className="result">
                         <div className="result-title">
-                            <img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/user_icon.png?raw=true" alt="" />
                             <p>{recentPrompt}</p>
+                            <img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/user_icon.png?raw=true" alt="" />
                         </div>
                         <div className="result-data">
                             <img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/gemini_icon.png?raw=true" alt="" />
