@@ -23,7 +23,7 @@ const Sidebar = () => {
                     }}
                 />
 
-                <ToggleDarkMode />
+                <ToggleDarkMode className="toggle" />
 
                 <div className="new-chat">
                     <img src={assets.plus_icon} alt="" onClick={() => {
