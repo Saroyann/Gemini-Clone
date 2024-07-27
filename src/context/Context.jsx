@@ -28,6 +28,8 @@ setResultData(prev=>prev+nextWord);
     }
     else {
         setPrevPrompts(prev=>[...prev, input]);
+        setRecentPrompt(input);
+        response3 = await run(input);
     }
     setRecentPrompt(input);
     setPrevPrompts(prev=>[...prev, input]);
@@ -41,7 +43,7 @@ setResultData(prev=>prev+nextWord);
         return;
     }
 
-    const response = responseFunction(); // Execute the returned function
+    const response = responseFunction();
 
     if (typeof response !== "string") {
         console.error("Invalid response:", response);
