@@ -28,6 +28,8 @@ setResultData(prev=>prev+nextWord);
     }
     else {
         setPrevPrompts(prev=>[...prev, input]);
+        setRecentPrompt(input);
+        response3 = await run(input);
     }
     setRecentPrompt(input);
     setPrevPrompts(prev=>[...prev, input]);
