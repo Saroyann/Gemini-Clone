@@ -4,7 +4,6 @@ import run from "../config/gemini";
 export const Context = createContext();
 
 const ContextProvider = (props) => {
-
     const [input, setInput] = useState("");
     const [recentPrompt, setRecentPrompt] = useState("");
     const [prevPrompts, setPrevPrompts] = useState([]);
@@ -13,20 +12,49 @@ const ContextProvider = (props) => {
     const [resultData, setResultData] = useState("");
 
     const delayPara = (index, nextWord) => {
-
-    }
+        // function logic here
+    };
 
     const onSent = async () => {
-        setResultData("");
-        setLoading(true);
-        setShowResult(true);
-        setRecentPrompt(input);
-        const response = await run(input);
-        setResultData(response);
+    setResultData("");
+    setLoading(true);
+    setShowResult(true);
+    setRecentPrompt(input);
+
+    const responseFunction = await run(input);
+
+    if (typeof responseFunction !== "function") {
+        console.error("Invalid response:", responseFunction);
         setLoading(false);
         setInput("");
+        return;
+    }
 
-    };
+    const response = responseFunction(); // Execute the returned function
+
+    if (typeof response !== "string") {
+        console.error("Invalid response:", response);
+        setLoading(false);
+        setInput("");
+        return;
+    }
+
+    let responseArray = response.split("**");
+    let newResponse = "";
+
+    for (let i = 0; i < responseArray.length; i++) {
+        if (i === 0 || i % 2 !== 1) {
+            newResponse += responseArray[i];
+        } else {
+            newResponse += `<b>${responseArray[i]}</b>`;
+        }
+    }
+
+    setResultData(newResponse);
+    setLoading(false);
+    setInput("");
+};
+
 
     const contextValue = {
         prevPrompts,
@@ -38,7 +66,7 @@ const ContextProvider = (props) => {
         loading,
         resultData,
         input,
-        setInput
+        setInput,
     };
 
     return (
