@@ -20,7 +20,7 @@ const Main = () => {
 		<div className="main">
 			<div className="nav">
 				<p>Gemini</p>
-				<img src={assets.user} alt="" />
+				<img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/user_icon.png?raw=true" alt="" />
 			</div>
 			<div className="main-container">
 				{!showResults ? (
@@ -77,11 +77,11 @@ const Main = () => {
 				) : (
 					<div className="result">
 						<div className="result-title">
-							<img src={assets.user} alt="" />
+							<img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/user_icon.png?raw=true" alt="" />
 							<p>{recentPrompt}</p>
 						</div>
 						<div className="result-data">
-							<img src={assets.gemini_icon} alt="" />
+							<img src="https://github.com/Saroyann/Gemini-Clone/blob/master/src/assets/gemini_icon.png?raw=true" alt="" />
 							{loading ? (
 								<div className="loader">
 									<hr />
