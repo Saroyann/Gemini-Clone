@@ -2,7 +2,6 @@ import "./sidebar.css";
 import { assets } from "../../assets/assets";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import ToggleDarkMode from "../toggleDarkMode/ToggleDarkMode";
 const Sidebar = () => {
     const [extended, setExtended] = useState(false);
     const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
@@ -22,8 +21,6 @@ const Sidebar = () => {
                         setExtended((prev) => !prev);
                     }}
                 />
-
-                <ToggleDarkMode className="toggle" />
 
                 <div className="new-chat">
                     <img src={assets.plus_icon} alt="" onClick={() => {
