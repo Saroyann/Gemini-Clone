@@ -21,6 +21,14 @@ setResultData(prev=>prev+nextWord);
     setResultData("");
     setLoading(true);
     setShowResult(true);
+    let response3;
+    if(prompt !== undefined) {
+        response3 = await run(prompt);
+        setRecentPrompt(prompt);
+    }
+    else {
+        setPrevPrompts(prev=>[...prev, input]);
+    }
     setRecentPrompt(input);
     setPrevPrompts(prev=>[...prev, input]);
 
