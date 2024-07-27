@@ -17,7 +17,7 @@ setResultData(prev=>prev+nextWord);
         }, 75*index)
     };
 
-    const onSent = async () => {
+    const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
