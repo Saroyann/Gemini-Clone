@@ -50,7 +50,9 @@ const ContextProvider = (props) => {
         }
     }
 
-    setResultData(newResponse);
+    let newResponse2 = newResponse.split("*").join("</br>");
+
+    setResultData(newResponse2);
     setLoading(false);
     setInput("");
 };
